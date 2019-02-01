@@ -1,0 +1,1466 @@
+@import url('bootstrap.css');
+
+@font-face {
+    font-family: 'Solomon Normal';
+    src: url('../fonts/solomon_normal-webfont.eot');
+    src: url('../fonts/solomon_normal-webfont.eot@#iefix') format('embedded-opentype'),
+         url('../fonts/solomon_normal-webfont.woff') format('woff'),
+         url('../fonts/solomon_normal-webfont.ttf') format('truetype'),
+         url('../fonts/solomon_normal-webfont.svg#solomon_normal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BD Cartoon Shout';
+    src: url('../fonts/bd_cartoon_shout-webfont.eot');
+    src: url('../fonts/bd_cartoon_shout-webfont.eot@#iefix') format('embedded-opentype'),
+         url('../fonts/bd_cartoon_shout-webfont.woff') format('woff'),
+         url('../fonts/bd_cartoon_shout-webfont.ttf') format('truetype'),
+         url('../fonts/bd_cartoon_shout-webfont.svg#bd_cartoon_shoutregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/*	General body, responsive img, wrapper background, content
+-------------------------------------------------------------- */
+
+body	{
+	margin: 0;
+	font: 14px/25px 'Solomon Normal', sans-serif;
+	color: #363636;
+	background: url(../images/linedpaper.png) repeat #fffdf0;
+}
+
+img	{
+	max-width: 100%;
+}
+
+#wrapper	{
+	background: url(../images/wrapper.png) no-repeat;
+	background-size: 100% auto;
+	min-height: 1300px;
+}
+
+h2	{
+	font: 30px 'BD Cartoon Shout', sans-serif;
+	color: #fff;
+}
+
+.img-margin	{
+	margin: 18px 0;
+}
+
+.fa	{
+	font-family: 'FontAwesome';
+}
+
+#content	{
+	margin-top: 220px;
+	margin-left: -10px
+}
+
+/*	Header and main navigation
+-------------------------------------------------------------- */
+
+header	{
+	position: relative;
+}
+
+.logo	{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 310px;
+	height: 190px;
+	background: url(../images/bg-logo.png) no-repeat;
+	background-size: 100% 100%;
+	text-align: center;
+	z-index: 10;
+}
+
+.logo img	{
+	margin: auto;
+	position: absolute;
+	top: 0; left: -26px; bottom: 0; right: 0;
+}
+
+nav	{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 572px;
+	height: 386px;
+	padding: 40px 140px 80px 170px;
+	font: 16px 'BD Cartoon Shout', sans-serif;
+	text-align: center;
+	line-height: 30px;
+}
+
+#sun	{
+	background: url(../images/sun.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+nav ul	{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul a	{
+	color: #fff;
+	padding: 3px 10px;
+	border-bottom: 2px solid transparent;
+	-webkit-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+}
+
+nav ul a:hover,
+nav ul .active a	{
+	color: #ec6713;
+	text-decoration: none;
+	border-bottom: 2px solid #ec6713;
+}
+
+.navbar-collapse	{
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	z-index: 999;
+	padding: 20px 140px 80px 170px;
+}
+
+/*	Buttons and form elements
+-------------------------------------------------------------- */
+
+.button	{
+	border-radius: 4px;
+	box-shadow: 1px 1px 0 #7d7d7d;
+	padding: 7px 10px;
+	color: #fff;
+	margin-bottom: 20px;
+}
+
+.button span	{
+	font-family: 'FontAwesome';
+	margin-right: 5px;
+}
+
+.button.blue	{
+	background: #61cbe6;
+}
+
+.button.red	{
+	background: #ef4b53;
+}
+
+.button.green	{
+	background: #2aae4a;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: none;
+	border: 0;
+	font-family: 'FontAwesome', 'Solomon Normal';
+}
+
+html input[type="text"],
+textarea {
+	border: 0;
+	font-family: 'Solomon Normal', sans-serif;
+	background: #fdf1d1;
+	border-radius: 4px;
+	margin-bottom: 15px;
+	width: 100%;
+	color: #313131;
+}
+
+input[type="submit"]	{
+	padding: 7px 20px;
+}
+
+input[type="text"]	{
+	padding: 10px 20px;
+}
+
+textarea	{
+	padding: 20px;
+	margin: 20px 0 25px 0;
+}
+
+/*	PrettyPhoto
+-------------------------------------------------------------- */
+
+div.pp_default .pp_top,
+div.pp_default .pp_top .pp_middle,
+div.pp_default .pp_top .pp_left,
+div.pp_default .pp_top .pp_right,
+div.pp_default .pp_bottom,
+div.pp_default .pp_bottom .pp_left,
+div.pp_default .pp_bottom .pp_middle,
+div.pp_default .pp_bottom .pp_right {
+    height: 13px;
+}
+
+div.pp_default .pp_top .pp_left {
+    background: url(../images/prettyPhoto/default/sprite.png) -78px -93px no-repeat;
+}
+
+div.pp_default .pp_top .pp_middle {
+    background: url(../images/prettyPhoto/default/sprite_x.png) top left repeat-x;
+}
+
+div.pp_default .pp_top .pp_right {
+    background: url(../images/prettyPhoto/default/sprite.png) -112px -93px no-repeat;
+}
+
+div.pp_default .pp_content .ppt {
+    color: #f8f8f8;
+}
+
+div.pp_default .pp_content_container .pp_left {
+    background: url(../images/prettyPhoto/default/sprite_y.png) -7px 0 repeat-y;
+    padding-left: 13px;
+}
+
+div.pp_default .pp_content_container .pp_right {
+    background: url(../images/prettyPhoto/default/sprite_y.png) top right repeat-y;
+    padding-right: 13px;
+}
+
+div.pp_default .pp_next:hover {
+    background: url(../images/prettyPhoto/default/sprite_next.png) center right no-repeat;
+    cursor: pointer;
+}
+
+div.pp_default .pp_previous:hover {
+    background: url(../images/prettyPhoto/default/sprite_prev.png) center left no-repeat;
+    cursor: pointer;
+}
+
+div.pp_default .pp_expand {
+    background: url(../images/prettyPhoto/default/sprite.png) 0 -29px no-repeat;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+}
+
+div.pp_default .pp_expand:hover {
+    background: url(../images/prettyPhoto/default/sprite.png) 0 -56px no-repeat;
+    cursor: pointer;
+}
+
+div.pp_default .pp_contract {
+    background: url(../images/prettyPhoto/default/sprite.png) 0 -84px no-repeat;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+}
+
+div.pp_default .pp_contract:hover {
+    background: url(../images/prettyPhoto/default/sprite.png) 0 -113px no-repeat;
+    cursor: pointer;
+}
+
+div.pp_default .pp_close {
+    width: 30px;
+    height: 30px;
+    background: url(../images/prettyPhoto/default/sprite.png) 2px 1px no-repeat;
+    cursor: pointer;
+}
+
+div.pp_default .pp_gallery ul li a {
+    background: url(../images/prettyPhoto/default/default_thumb.png) center center #f8f8f8;
+    border: 1px solid #aaa;
+}
+
+div.pp_default .pp_social {
+    margin-top: 7px;
+}
+
+div.pp_default .pp_gallery a.pp_arrow_previous,div.pp_default .pp_gallery a.pp_arrow_next {
+    position: static;
+    left: auto;
+}
+
+div.pp_default .pp_nav .pp_play,div.pp_default .pp_nav .pp_pause {
+    background: url(../images/prettyPhoto/default/sprite.png) -51px 1px no-repeat;
+    height: 30px;
+    width: 30px;
+}
+
+div.pp_default .pp_nav .pp_pause {
+    background-position: -51px -29px;
+}
+
+div.pp_default a.pp_arrow_previous,div.pp_default a.pp_arrow_next {
+    background: url(../images/prettyPhoto/default/sprite.png) -31px -3px no-repeat;
+    height: 20px;
+    width: 20px;
+    margin: 4px 0 0;
+}
+
+div.pp_default a.pp_arrow_next {
+    left: 52px;
+    background-position: -82px -3px;
+}
+
+div.pp_default .pp_content_container .pp_details {
+    margin-top: 5px;
+}
+
+div.pp_default .pp_nav {
+    clear: none;
+    height: 30px;
+    width: 110px;
+    position: relative;
+}
+
+div.pp_default .pp_nav .currentTextHolder {
+    font-family: Georgia;
+    font-style: italic;
+    color: #999;
+    font-size: 11px;
+    left: 75px;
+    line-height: 25px;
+    position: absolute;
+    top: 2px;
+    margin: 0;
+    padding: 0 0 0 10px;
+}
+
+div.pp_default .pp_close:hover,div.pp_default .pp_nav .pp_play:hover,div.pp_default .pp_nav .pp_pause:hover,div.pp_default .pp_arrow_next:hover,div.pp_default .pp_arrow_previous:hover {
+    opacity: 0.7;
+}
+
+div.pp_default .pp_description {
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 14px;
+    margin: 5px 50px 5px 0;
+}
+
+div.pp_default .pp_bottom .pp_left {
+    background: url(../images/prettyPhoto/default/sprite.png) -78px -127px no-repeat;
+}
+
+div.pp_default .pp_bottom .pp_middle {
+    background: url(../images/prettyPhoto/default/sprite_x.png) bottom left repeat-x;
+}
+
+div.pp_default .pp_bottom .pp_right {
+    background: url(../images/prettyPhoto/default/sprite.png) -112px -127px no-repeat;
+}
+
+div.pp_default .pp_loaderIcon {
+    background: url(../images/prettyPhoto/default/loader.gif) center center no-repeat;
+}
+
+div.facebook .pp_top .pp_left {
+    background: url(../images/prettyPhoto/facebook/sprite.png) -88px -53px no-repeat;
+}
+
+div.facebook .pp_top .pp_middle {
+    background: url(../images/prettyPhoto/facebook/contentPatternTop.png) top left repeat-x;
+}
+
+div.facebook .pp_top .pp_right {
+    background: url(../images/prettyPhoto/facebook/sprite.png) -110px -53px no-repeat;
+}
+
+div.facebook .pp_content_container .pp_left {
+    background: url(../images/prettyPhoto/facebook/contentPatternLeft.png) top left repeat-y;
+}
+
+div.facebook .pp_content_container .pp_right {
+    background: url(../images/prettyPhoto/facebook/contentPatternRight.png) top right repeat-y;
+}
+
+div.facebook .pp_expand {
+    background: url(../images/prettyPhoto/facebook/sprite.png) -31px -26px no-repeat;
+    cursor: pointer;
+}
+
+div.facebook .pp_expand:hover {
+    background: url(../images/prettyPhoto/facebook/sprite.png) -31px -47px no-repeat;
+    cursor: pointer;
+}
+
+div.facebook .pp_contract {
+    background: url(../images/prettyPhoto/facebook/sprite.png) 0 -26px no-repeat;
+    cursor: pointer;
+}
+
+div.facebook .pp_contract:hover {
+    background: url(../images/prettyPhoto/facebook/sprite.png) 0 -47px no-repeat;
+    cursor: pointer;
+}
+
+div.facebook .pp_close {
+    width: 22px;
+    height: 22px;
+    background: url(../images/prettyPhoto/facebook/sprite.png) -1px -1px no-repeat;
+    cursor: pointer;
+}
+
+div.facebook .pp_description {
+    margin: 0 37px 0 0;
+}
+
+div.facebook .pp_loaderIcon {
+    background: url(../images/prettyPhoto/facebook/loader.gif) center center no-repeat;
+}
+
+div.facebook .pp_arrow_previous {
+    background: url(../images/prettyPhoto/facebook/sprite.png) 0 -71px no-repeat;
+    height: 22px;
+    margin-top: 0;
+    width: 22px;
+}
+
+div.facebook .pp_arrow_previous.disabled {
+    background-position: 0 -96px;
+    cursor: default;
+}
+
+div.facebook .pp_arrow_next {
+    background: url(../images/prettyPhoto/facebook/sprite.png) -32px -71px no-repeat;
+    height: 22px;
+    margin-top: 0;
+    width: 22px;
+}
+
+div.facebook .pp_arrow_next.disabled {
+    background-position: -32px -96px;
+    cursor: default;
+}
+
+div.facebook .pp_nav {
+    margin-top: 0;
+}
+
+div.facebook .pp_nav p {
+    font-size: 15px;
+    padding: 0 3px 0 4px;
+}
+
+div.facebook .pp_nav .pp_play {
+    background: url(../images/prettyPhoto/facebook/sprite.png) -1px -123px no-repeat;
+    height: 22px;
+    width: 22px;
+}
+
+div.facebook .pp_nav .pp_pause {
+    background: url(../images/prettyPhoto/facebook/sprite.png) -32px -123px no-repeat;
+    height: 22px;
+    width: 22px;
+}
+
+div.facebook .pp_next:hover {
+    background: url(../images/prettyPhoto/facebook/btnNext.png) center right no-repeat;
+    cursor: pointer;
+}
+
+div.facebook .pp_previous:hover {
+    background: url(../images/prettyPhoto/facebook/btnPrevious.png) center left no-repeat;
+    cursor: pointer;
+}
+
+div.facebook .pp_bottom .pp_left {
+    background: url(../images/prettyPhoto/facebook/sprite.png) -88px -80px no-repeat;
+}
+
+div.facebook .pp_bottom .pp_middle {
+    background: url(../images/prettyPhoto/facebook/contentPatternBottom.png) top left repeat-x;
+}
+
+div.facebook .pp_bottom .pp_right {
+    background: url(../images/prettyPhoto/facebook/sprite.png) -110px -80px no-repeat;
+}
+
+div.pp_pic_holder a:focus {
+    outline: none;
+}
+
+div.pp_overlay {
+    background: #000;
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 9500;
+}
+
+div.pp_pic_holder {
+    display: none;
+    position: absolute;
+    width: 100px;
+    z-index: 10000;
+}
+
+.pp_content {
+    height: 40px;
+    min-width: 40px;
+}
+
+* html .pp_content {
+    width: 40px;
+}
+
+.pp_content_container {
+    position: relative;
+    text-align: left;
+    width: 100%;
+}
+
+.pp_content_container .pp_left {
+    padding-left: 20px;
+}
+
+.pp_content_container .pp_right {
+    padding-right: 20px;
+}
+
+.pp_content_container .pp_details {
+    float: left;
+    margin: 10px 0 2px;
+}
+
+.pp_description {
+    display: none;
+    margin: 0;
+}
+
+.pp_social {
+    float: left;
+    margin: 0;
+}
+
+.pp_social .facebook {
+    float: left;
+    margin-left: 5px;
+    width: 45px;
+    overflow: hidden;
+}
+
+.pp_social .twitter {
+    float: left;
+}
+
+.pp_nav {
+    clear: right;
+    float: left;
+    margin: 3px 10px 0 0;
+}
+
+.pp_nav p {
+    float: left;
+    white-space: nowrap;
+    margin: 2px 4px;
+}
+
+.pp_nav .pp_play,.pp_nav .pp_pause {
+    float: left;
+    margin-right: 4px;
+    text-indent: -10000px;
+}
+
+a.pp_arrow_previous,a.pp_arrow_next {
+    display: block;
+    float: left;
+    height: 15px;
+    margin-top: 3px;
+    overflow: hidden;
+    text-indent: -10000px;
+    width: 14px;
+}
+
+.pp_hoverContainer {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2000;
+}
+
+.pp_gallery {
+    display: none;
+    left: 50%;
+    margin-top: -50px;
+    position: absolute;
+    z-index: 10000;
+}
+
+.pp_gallery div {
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+
+.pp_gallery ul {
+    float: left;
+    height: 35px;
+    position: relative;
+    white-space: nowrap;
+    margin: 0 0 0 5px;
+    padding: 0;
+}
+
+.pp_gallery ul a {
+    border: 1px rgba(0,0,0,0.5) solid;
+    display: block;
+    float: left;
+    height: 33px;
+    overflow: hidden;
+}
+
+.pp_gallery ul a img {
+    border: 0;
+}
+
+.pp_gallery li {
+    display: block;
+    float: left;
+    margin: 0 5px 0 0;
+    padding: 0;
+}
+
+.pp_gallery li.default a {
+    background: url(../images/prettyPhoto/facebook/default_thumbnail.gif) 0 0 no-repeat;
+    display: block;
+    height: 33px;
+    width: 50px;
+}
+
+.pp_gallery .pp_arrow_previous,.pp_gallery .pp_arrow_next {
+    margin-top: 7px!important;
+}
+
+a.pp_next {
+    background: url(../images/prettyPhoto/light_rounded/btnNext.png) 10000px 10000px no-repeat;
+    display: block;
+    float: right;
+    height: 100%;
+    text-indent: -10000px;
+    width: 49%;
+}
+
+a.pp_previous {
+    background: url(../images/prettyPhoto/light_rounded/btnNext.png) 10000px 10000px no-repeat;
+    display: block;
+    float: left;
+    height: 100%;
+    text-indent: -10000px;
+    width: 49%;
+}
+
+a.pp_expand,a.pp_contract {
+    cursor: pointer;
+    display: none;
+    height: 20px;
+    position: absolute;
+    right: 30px;
+    text-indent: -10000px;
+    top: 10px;
+    width: 20px;
+    z-index: 20000;
+}
+
+a.pp_close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    line-height: 22px;
+    text-indent: -10000px;
+}
+
+.pp_loaderIcon {
+    display: block;
+    height: 24px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    width: 24px;
+    margin: -12px 0 0 -12px;
+}
+
+#pp_full_res {
+    line-height: 1!important;
+}
+
+#pp_full_res .pp_inline {
+    text-align: left;
+}
+
+#pp_full_res .pp_inline p {
+    margin: 0 0 15px;
+}
+
+div.ppt {
+    color: #fff;
+    display: none;
+    font-size: 17px;
+    z-index: 9999;
+    margin: 0 0 5px 15px;
+}
+
+div.pp_default .pp_content {
+    background-color: #fff;
+}
+
+div.pp_default #pp_full_res .pp_inline {
+    color: #000;
+}
+
+div.pp_default .pp_gallery ul li a:hover,
+div.pp_default .pp_gallery ul li.selected a,
+.pp_gallery ul a:hover,
+.pp_gallery li.selected a {
+    border-color: #fff;
+}
+
+div.pp_default .pp_details {
+    position: relative;
+}
+
+.pp_top,
+.pp_bottom {
+    height: 20px;
+    position: relative;
+}
+
+* html .pp_top,
+* html .pp_bottom {
+    padding: 0 20px;
+}
+
+.pp_top .pp_left,
+.pp_bottom .pp_left {
+    height: 20px;
+    left: 0;
+    position: absolute;
+    width: 20px;
+}
+
+.pp_top .pp_middle,
+.pp_bottom .pp_middle {
+    height: 20px;
+    left: 20px;
+    position: absolute;
+    right: 20px;
+}
+
+* html .pp_top .pp_middle,
+* html .pp_bottom .pp_middle {
+    left: 0;
+    position: static;
+}
+
+.pp_top .pp_right,
+.pp_bottom .pp_right {
+    height: 20px;
+    left: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+}
+
+.pp_fade,
+.pp_gallery li.default a img {
+    display: none;
+}
+
+/*	Homepage
+-------------------------------------------------------------- */
+
+/*	Homepage WOW Slider
+-------------------------------- */
+
+#wowslider-container1 {
+	zoom: 1;
+	position: relative;
+	max-width: 670px;
+	z-index: 90;
+	border: none;
+	text-align: left; /* reset align=center */
+	position: absolute;
+	top: 128px;
+	left: 180px;
+}
+
+* html #wowslider-container1{ width: 1100px }
+#wowslider-container1 .ws_images ul{
+	position: relative;
+	width: 10000%;
+	height: auto;
+	left: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border-spacing: 0;
+	overflow: visible;
+	/*table-layout: fixed;*/
+}
+
+#wowslider-container1 .ws_images ul li{
+	width: 1%;
+	line-height: 0; /*opera*/
+	float: left;
+	font-size: 0;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+#wowslider-container1 .ws_images{
+	position: relative;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+#wowslider-container1 .ws_images a{
+	width: 100%;
+	display: block;
+	color: transparent;
+}
+
+#wowslider-container1 img{
+	max-width: none !important;
+}
+
+#wowslider-container1 .ws_images img{
+	width: 100%;
+	border: none 0;
+	max-width: none;
+	padding: 0;
+}
+
+#wowslider-container1 a{
+	text-decoration: none;
+	outline: none;
+	border: none;
+}
+
+#wowslider-container1 .ws_bullets {
+	font-size: 0px;
+	float: left;
+	position: absolute;
+	z-index: 70;
+	width: 106px;
+	height: 140px;
+	background: url(../images/slider.png) no-repeat;
+	background-size: cover;
+}
+
+#wowslider-container1 .ws_bullets div{
+	position: absolute;
+	left: 20px;
+	bottom: 35px;
+}
+
+#wowslider-container1 a.wsl{
+	display: none;
+}
+
+#wowslider-container1 sound,
+#wowslider-container1 object{
+	position: absolute;
+}
+
+#wowslider-container1 {
+	border-left: 0px;
+	border-right: 0px;
+}
+
+#wowslider-container1 .ws_bullets {
+	padding: 5px;
+	text-align: center;
+}
+
+#wowslider-container1 .ws_bullets a {
+	width: 12px;
+	height: 12px;
+	background: #f8db54;
+	border-radius: 50%;
+	float: left;
+	color: #f8db54;
+	font-size: 1px;
+	position: relative;
+	margin-left: 0;
+	color: transparent;
+	margin-right: 5px;
+}
+
+#wowslider-container1 .ws_bullets a.ws_selbull, #wowslider-container1 .ws_bullets a:hover{
+	background: #c3c705;
+}
+
+#wowslider-container1 a.ws_next, #wowslider-container1 a.ws_prev {
+	position: absolute;
+	display: block;
+	bottom: 0;
+	margin-top: -15px;
+	z-index: 60;
+	height: 48px;
+	width: 48px;
+	background-image: url(../images/wowslider/arrows.png);
+	background-color: #f8db54;
+	border-radius: 50%;
+}
+
+#wowslider-container1 a.ws_next{
+	background-position: 48px 0;
+	right: 100px;
+}
+
+#wowslider-container1 a.ws_prev {
+	right: 150px;
+	background-position: 0 0;
+}
+
+* html #wowslider-container1 a.ws_next,
+* html #wowslider-container1 a.ws_prev,
+#wowslider-container1:hover a.ws_next,
+#wowslider-container1:hover a.ws_prev	{ display: block; }
+
+#wowslider-container1 .ws_bullets {
+	top: 96px;
+	left: -130px;
+}
+
+#wowslider-container1 .ws-title{
+	position: absolute;
+	display: block;
+	bottom: 35px;
+	left: 110px;
+	margin-right: 5px;
+	z-index: 50;
+	font-size: 35px;
+	line-height: 42px;
+	font-weight: bold;
+}
+
+#wowslider-container1 .ws-title div,
+#wowslider-container1 .ws-title span	{
+	display: inline-block;
+	margin-top: 10px;
+	padding: 10px;
+	background: none;
+	color: #716d4a;
+    background: rgba(255, 255, 255, 0.8);
+	font-weight: normal;
+    text-shadow: 0 2px 5px rgba(255, 255, 255, 1);
+	border-radius: 10px;
+	opacity: 1;
+}
+
+.ie8 .ws-title	{
+    background: #fff;
+}
+
+#wowslider-container1 .ws-title div{
+	display: block;
+	margin-top: 10px;
+	font-size: 16px;
+	line-height: 18px;
+}
+
+#wowslider-container1 .ws_images ul{
+	animation: wsBasic 11.6s infinite;
+	-moz-animation: wsBasic 11.6s infinite;
+	-webkit-animation: wsBasic 11.6s infinite;
+}
+
+@keyframes wsBasic{0%{left: -0%} 25%{left: -0%} 50%{left: -100%} 75%{left: -100%} }
+@-moz-keyframes wsBasic{0%{left: -0%} 25%{left: -0%} 50%{left: -100%} 75%{left: -100%} }
+@-webkit-keyframes wsBasic{0%{left: -0%} 25%{left: -0%} 50%{left: -100%} 75%{left: -100%} }
+
+#featured	{
+	position: relative;
+}
+
+#content-homepage	{
+	margin-top: 565px;
+}
+
+#col-yellow,
+#col-green,
+#col-orange	{
+	border-radius: 4px;
+	border-width: 5px 0 24px 0;
+	border-style: solid;
+	padding: 15px 25px 25px 25px;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+#col-yellow	{
+	background: #efc043;
+	border-color: #f29f34;
+}
+
+#col-green	{
+	background: #d5c651;
+	border-color: #c2b130;
+}
+
+#col-orange	{
+	background: #eb7400;
+	border-color: #e25a00;
+}
+
+#ladybug	{
+	width: 58px;
+	height: 37px;
+	background: url(../images/ladybug.png) no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: -42px;
+	left: 30px;
+}
+
+#butterfly	{
+	width: 63px;
+	height: 57px;
+	background: url(../images/butterfly.png) no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: -40px;
+	left: -30px;
+}
+
+/*	Pages
+-------------------------------------------------------------- */
+
+.cloud	{
+	background: url(../images/cloud.png) no-repeat left bottom;
+	height: 218px;
+	background-size: 100% 100%;
+}
+
+.cloud h1	{
+	color: #61cbe6;
+	font: 30px 'BD Cartoon Shout';
+	text-align: center;
+	padding: 120px 30px 0 30px;
+}
+
+.content-bg	{
+	background: #fff;
+	padding: 1px 30px 30px 30px;
+}
+
+.green-title	{
+	color: #2aae4a;
+	font-size: 18px;
+	letter-spacing: 0;
+}
+
+.gallery img,
+.img-border	{
+	border: 5px solid #fff7b1;
+	margin: 0 7px 7px 0;
+	float: left;
+}
+
+.separator	{
+	width: 100%;
+	height: 40px;
+	background: url(../images/flower.png) center center no-repeat;
+	background-size: auto 100%;
+	margin: 20px 0;
+}
+
+/*	Blog
+-------------------------------------------------------------- */
+
+.post-meta,
+.post-meta a,
+.post-data,
+.post-data a	{
+	color: #bababa;
+}
+
+.mg-b10	{
+	margin-bottom: 10px;
+}
+
+.entry-title,
+.post-title	{
+	margin-bottom: 0;
+	color: #2aae4a;
+	font-size: 18px;
+	letter-spacing: 0;
+}
+
+.entry-title a,
+.post-title a	{
+	color: #2aae4a;
+}
+
+/*	Contact - Google Maps
+-------------------------------- */
+
+#map	{
+	width: 100%;
+	height: 250px;
+	margin: 30px 0;
+}
+
+/*	Footer
+-------------------------------------------------------------- */
+
+.footer-menu	{
+	background: #f3c856;
+	border-top: 2px solid #f09e01;
+	border-bottom: 2px solid #f09e01;
+	margin-top: 50px;
+	line-height: 80px;
+}
+
+.footer-bottom	{
+	background: #3e3e3e;
+	height: 50px;
+	line-height: 48px;
+	color: #979797;
+	text-align: left;
+}
+
+.social-media a	{
+	color: #ef4b53;
+	font-size: 30px;
+	display: inline-block;
+	text-decoration: none;
+	margin: 0px 7px 7px 0;
+}
+
+.footer-menu .social-media a	{
+	margin: 0 20px 0 0;
+}
+
+.footer-links	{
+	font-size: 16px;
+	color: #f09e01;
+	text-align: right;
+}
+
+.footer-links a	{
+	color: #8466ad;
+}
+
+/*	Media Queries
+-------------------------------------------------------------- */
+
+@media (min-width: 850px) {
+  .container {
+    max-width: 830px;
+  }
+}
+
+@media (min-width: 980px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1004px;
+  }
+}
+
+@media (min-width: 1040px) {
+  .container {
+    max-width: 1020px;
+  }
+}
+
+@media (min-width: 1060px) {
+  .container {
+    max-width: 1040px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .container {
+    max-width: 1080px;
+  }
+}
+
+@media (min-width: 1160px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+@media (max-width: 1100px) {
+	#sun	{
+		background-position: 80px 0;
+		background-size: 100% auto;
+	}
+	nav	{
+		width: 500px;
+		padding: 40px 50px 80px 230px;
+	}
+
+	.navbar-toggle	{
+		background: #fff;
+		font-size: 30px;
+		border: 1px solid #f1ad15;
+		position: absolute;
+		top: 70px;
+		left: 320px;
+	}
+
+	.navbar-header,
+	.navbar-toggle,
+	.navbar-collapse	{
+		z-index: 99999;
+	}
+
+	.navbar-collapse {
+		padding: 20px 50px 0px 230px;
+	}
+}
+
+@media (max-width: 992px) {
+	#wrapper	{
+		background: transparent;
+		min-height: 100px;
+	}
+	.navbar-collapse	{
+		position: absolute;
+		top: 130px;
+		right: 130px;
+		background: #fec42b;
+		padding: 20px;
+		border-radius: 4px;
+		bottom: auto;
+	}
+	.social-media	{
+		margin-top: 10px;
+	}
+	.social-media,
+	.footer-links	{
+		line-height: 30px;
+	}
+	.footer-links	{
+		text-align: left;
+		line-height: 20px;
+		margin-bottom: 10px;
+	}
+}
+
+@media (max-width: 980px) {
+	#content-homepage	{
+		margin-top: 550px;
+	}
+}
+
+@media (max-width: 850px) {
+	.ws-title	{
+		display: none !important;
+	}
+	#content-homepage	{
+		margin-top: 500px;
+	}
+}
+
+@media (max-width: 750px) {
+	#content-homepage	{
+		margin-top: 450px;
+	}
+}
+
+@media (max-width: 680px) {
+	nav	{
+		width: 300px;
+	}
+	.navbar-toggle {
+		top: 35px;
+		left: 190px;
+	}
+	.navbar-collapse {
+		top: 100px;
+		right: 60px;
+	}
+	#sun	{
+		background-position: 60px 0;
+	}
+	#wowslider-container1	{
+		top: 148px;
+		left: 140px;
+	}
+	.cloud {
+		height: 178px;
+	}
+}
+
+@media (max-width: 560px) {
+	#wowslider-container1	{
+		top: 178px;
+		left: 120px;
+	}
+	#wowslider-container1 .ws_bullets	{
+		left: -110px;
+		top: 76px;
+	}
+}
+
+@media (max-width: 479px) {
+	.logo	{
+		max-width: 100%;
+	}
+	#wowslider-container1	{
+		display: none;
+	}
+	#content-homepage	{
+		margin-top: 250px;
+	}
+	.cloud {
+		height: 148px;
+	}
+	.cloud h1 {
+		color: #61cbe6;
+		font: 24px 'BD Cartoon Shout';
+		text-align: center;
+		padding: 80px 30px 0 30px;
+	}
+}
+
+@media (max-width: 450px) {
+	.logo	{
+		top: 70px;
+	}
+	#content-homepage	{
+		margin-top: 300px;
+	}
+	.navbar-toggle {
+		top: 10px;
+	}
+	.cloud {
+		height: 78px;
+	}
+	.cloud h1 {
+		color: #61cbe6;
+		font: 24px 'BD Cartoon Shout';
+		text-align: center;
+		padding: 80px 30px 0 30px;
+	}
+	#content {
+		margin-top: 260px;
+	}
+	.content-bg	{
+		padding-top: 40px;
+	}
+}
+
+/*	Retina (HiDPI) Display
+    http://www.quirksmode.org/blog/archives/2012/06/devicepixelrati.html
+-------------------------------------------------------------- */
+
+@media
+only screen and (-moz-min-device-pixel-ratio:1.5),
+only screen and (-o-min-device-pixel-ratio:3/2),
+only screen and (-webkit-min-device-pixel-ratio:1.5),
+only screen and (min-device-pixel-ratio:1.5) {
+	body	{
+		background: url(../images/linedpaper2x.png) repeat #fffdf0;
+	}
+	#wrapper	{
+		background: url(../images/wrapper2x.png) no-repeat;
+		background-size: 100% auto;
+	}
+	.logo	{
+		background: url(../images/bg-logo2x.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	#sun	{
+		background: url(../images/sun2x.png) no-repeat;
+		background-size: 100% auto;
+	}
+	#ladybug	{
+		background: url(../images/ladybug2x.png) no-repeat;
+		background-size: cover;
+	}
+	#butterfly	{
+		background: url(../images/butterfly2x.png) no-repeat;
+		background-size: cover;
+	}
+	.cloud	{
+		background: url(../images/cloud2x.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	#wowslider-container1 .ws_bullets {
+		background: url(../images/slider.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	#wowslider-container1 .ws_bullets {
+		background: url(../images/slider2x.png) no-repeat;
+		background-size: cover;
+	}
+	.separator	{
+		background: url(../images/flower2x.png) center center no-repeat;
+		background-size: auto 100%;
+	}
+}
+
+@media only screen and (-moz-min-device-pixel-ratio:1.5) and (max-width: 1100px),
+only screen and (-o-min-device-pixel-ratio:3/2) and (max-width: 1100px),
+only screen and (-webkit-min-device-pixel-ratio:1.5) and (max-width: 1100px),
+only screen and (min-device-pixel-ratio:1.5) and (max-width: 1100px) {
+	#wrapper	{
+		background: transparent;
+		min-height: 100px;
+	}
+}
+
+@media only screen and (-moz-min-device-pixel-ratio:1.5) and (max-width: 640px),
+only screen and (-o-min-device-pixel-ratio:3/2) and (max-width: 640px),
+only screen and (-webkit-min-device-pixel-ratio:1.5) and (max-width: 640px),
+only screen and (min-device-pixel-ratio:1.5) and (max-width: 640px) {
+	#sun	{
+		background-position: 60px 0;
+	}
+	.cloud {
+		height: 148px;
+		background-size: 100% auto;
+		background-position: left bottom;
+	}
+	.cloud h1 {
+		color: #61cbe6;
+		font: 24px 'BD Cartoon Shout';
+		text-align: center;
+		padding: 120px 30px 0 30px;
+	}
+	.content-bg	{
+		padding-top: 40px;
+	}
+	.logo	{
+		max-width: 100%;
+	}
+}
